@@ -1,0 +1,14 @@
+[Unit]
+Description=PIR Switch
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u PIRSwitch.py
+WorkingDirectory=/home/pi/PIRSwitch
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
